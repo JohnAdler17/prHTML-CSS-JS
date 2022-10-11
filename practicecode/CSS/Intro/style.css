@@ -1,0 +1,140 @@
+footer {
+  color: black;
+  background-color: lightgrey;
+  padding: 5px 20px 5px 20px;
+  margin: 20px;
+  text-shadow: 2px 2px 4px yellow;
+  border: 2px solid black;
+}
+
+/*this is styling using an id property, any tag with the id="styling-Ids" will have these styling applied to them*/
+/*each HTML element can only have 1 ID*/
+#styling-Ids {
+  color: red
+}
+
+/*initialize classes with a . and then the class name*/
+.fancy-border {
+  border: 3px dashed red;
+  display: inline-block;
+  padding: 10px;
+}
+
+.green-text {
+  color: green;
+}
+
+/*SELECTORS IN CSS - used to select any element from your HTML file - the most common selectors are ids and classes*/
+/*starting with * allows you to style the ENTIRE HTML file (every tag)*/
+*{
+  color: black;
+}
+
+/*accesses any list items inside an unordered list*/
+ul > li {
+  color: purple;
+}
+
+/*accesses any h2 headers that come directly after a paragraph*/
+p + h2 {
+  color: pink;
+  font-size: 16px;
+}
+
+/*you can write CSS functions for HTML attributes instead of tags*/
+/*sets tags with an href (links) to have a background color of darkblue*/
+[href] {
+  background-color: darkblue;
+}
+
+/*you can combine CSS functions with tags with those with attributes*/
+li[title="DUR"] {
+  background-color: darkblue;
+}
+
+/*accesses any tag that has a title that CONTAINS the letters DU*/
+[title*="DU"] {
+  color: white;
+}
+
+/*accesses any checkbox that has been checked*/
+input:checked {
+  box-shadow: 2px 2px 4px red;
+}
+
+/*accesses any input text box that has been clicked on*/
+input:focus {
+  box-shadow: 2px 2px 4px purple;
+}
+
+/*accesses any input tags*/
+input {
+  background-color: yellow;
+}
+
+/*accesses inputs with the type of checkbox that have been checked*/
+input[type="checkbox"]:checked {
+  background-color: blue;
+}
+
+/*accesses any h2 elements that have been hovered over with the mouse*/
+h2:hover {
+  background-color: pink;
+}
+
+/*accesses the last child list element in an unordered list (is overwritten by the ul>li function above)*/
+ul > li:last-child {
+  background-color: pink;
+}
+
+/*accesses the 2nd to last and last child list element in an unordered list, you can change the argument to change the element accessed*/
+ul > li:nth-last-child(2) {
+  background-color: teal;
+}
+
+/*USE CSS SELECTOR LIST TO SEE WHAT HTML ELEMENTS AND PROPERTIES YOU CAN ACCESS THROUGH CSS*/
+
+/*flexbox in CSS - a great way to make a really good grid layouts*/
+/*display: flex; sets the display to a flex container and makes the contents resize depending on how shrunk the window is*/
+/*flex-direction: column; sets the grid display to columns and flex-direction: row; sets the display to rows*/
+/*flex-direction: row-reverse; reverses the order of the rows, column-reverse reverses the order of the columns*/
+/*justify-content: flex-start aligns the items to the left of the screen while flex-end aligns them to the right of the screen*/
+/*justify-content: center; centers the items on the screen, justify-content: space-between; puts space inbetween the elements as the grid gets bigger, space-around to spread the space more evenly*/
+/*flex-wrap: wrap; makes the elements go to the next line if the screen is too small (wrap-reverse does the same but also reverses it) --> would be good for websites designed for mobile devices*/
+/*align-items: flex-start; aligns items at the top and flex-end aligns them at the bottom, center aligns items at their centers (good for items with different heights)*/
+/*align-content: flex-start; aligns items at top, end aligns at bottom, center aligns in the center, space-around, space-between do the same thing as before*/
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-around;*/
+  flex-wrap: wrap;
+  align-items: flex-start;
+  /*align-content: space-around;*/
+}
+
+.container {
+  background-color: coral;
+  border: 10px solid black;
+  height: 600px;
+  max-width: 1500px;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: orange;
+  box-shadow: 2px 2px 3px black;
+  padding: 5px 10px 10px 5px;
+  margin: 10px 20px 20px 10px;
+}
+
+.box2 {
+  width: 120px;
+  height: 80px;
+  background-color: orange;
+  box-shadow: 2px 2px 3px black;
+  padding: 5px 10px 10px 5px;
+  margin: 10px 20px 20px 10px;
+}
+
+/*ANIMATIONS IN CSS*/

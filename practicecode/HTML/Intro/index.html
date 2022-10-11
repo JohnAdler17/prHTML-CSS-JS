@@ -1,0 +1,199 @@
+<!DOCTYPE html> <!--this line declares the file as a html type -->
+<html> <!--simple html tag, when a tag is inside another tag, indent it, this tag is the parent of the head and body tags -->
+
+  <head> <!--the head is like the settings of the html file (metadata) -->
+    <!-- a meta tag is a tag that defines information about the file -->
+    <!-- meta tags have properties/attributes -->
+    <!--meta tags in HTML-->
+    <meta charset="utf-8">
+    <meta name="description" content="This is a website page description"> <!--max description length is around 150 characters, more than that and it gets ignored-->
+    <meta name="author" content="Jababy">
+    <meta name="keywords" content="HTML, Tutorial"> <!--add keyword tags to your website so it can be found easier in searches-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--controls how your website is displayed on different devices-->
+    <title>Jababy's First Website</title> <!--this is a title tag that holds text, renames the website on the website tab itself-->
+  </head>
+
+<!--using the background-color style tag in the body allows you to change the color of the background of the whole website-->
+  <body style="background-color: lightblue;"> <!--where all the content for the webpage goes, the meat, the head tag and the body tag are sibling tags -->
+    <!--order of elements matters, which ever tags come first are at top of page, and the rest follow down the page -->
+    <h1>Jababy's Website</h1> <!-- this is a header tag, you can assign headers to h1 through h6 -->
+    <!-- h1 is the biggest header, while h6 is the smallest header, headers will look bigger and bolder -->
+    <br/> <!--break tags add a line of space between different tags -->
+
+    <hr/> <!--horizontal rule tag, draws a horizontal line across the webpage to separate information -->
+    <hr/>
+
+    <p><big>This</big> <small>is</small> my <b>paragraph</b></p> <!--this is a paragraph tag--> <!-- the b tag is the bold tag, the i tag is an italics tag -->
+    <p>This is another <b><i>paragraph</i></b></p> <!--paragraphs are automatically formatted to be separate from one another -->
+    <!--big and small tags can make text bigger or smaller -->
+
+    <p>H<sub>2</sub>0</p> <!--subscript tag-->
+    <p>10<sup>2</sup></p> <!--superscript tag-->
+    <!--all of these in-paragraph tags can be used for ANY text in the html document-->
+
+    <!--styles and colors: you can look up CSS colors to see supported colors, you can pass in the name of color or the HEX of the color-->
+    <h2 style="color: green;">Style and Colors</h2>
+    <p style="color: white; background-color:blue;" >You can style your HTML</p>
+
+    <!--formatting/layout tags-->
+    <!--header, main, and footer layout tags-->
+    <header>
+      <nav> <!--navigation tags for like drop down menus and stuff?-->
+
+      </nav>
+    </header>
+
+    <main>
+      <article> <!--tag for an article-->
+        <section> <!--section tags for breaking apart article into sections, usually use a header tag at the start of each section-->
+          <h3 style="color: purple;">Section 1 of my article bitch</h3>
+        </section>
+        <section>
+          <h3>Section 2 of my article bitch</h3>
+        </section>
+        <section>
+          <aside> <!--aside tag is good for something like an ad on the webpage-->
+          </aside>
+        </section>
+      </article>
+    </main>
+
+    <!--LINKS-->
+    <a href="https://www.google.com" target="_blank"><h1>Google's Homepage Link Text</h1></a> <!--open to another tab with a link, use target="_blank" in the link tag-->
+
+    <a href="page2.html">Page 2</a> <!--this syntax works if page2 is in the same directory as index.html-->
+
+    <a href="dir1/page3.html">Page 3</a> <!--if page is inside a directory, you must put the file location in the address-->
+
+    <a href="snorlaxsleeping.jpg" target="_blank">Snorlax</a> <!--you can also use this syntax to link to pictures or files or whatever really as long as it is in the same directory and if not, navigate to the correct directory first-->
+
+    <!--IMAGES in HTML-->
+    <!--src gets the location of the image and alt is a default if the image is not found, ALWAYS HAVE AN ALT TAG IN IMAGES-->
+    <!--image tags are single tags, so no closing tag necessary-->
+    <img src="https://i.kym-cdn.com/photos/images/original/000/627/243/6a0.jpg" alt="Mr. Mime is disgusted" />
+
+    <img width="150" height="70" src="snorlaxsleeping.jpg" alt="Snorlax not found" /> <!--the width and height tags define the dimensions of the picture in pixels-->
+    <!--you have to MANUALLY keep the resized image within its own aspect ratio, look at the original aspect ratio and keep the proportions the same-->
+    <!--if you only change ONE of the width or heights of an image, HTML will keep the image IN ASPECT RATIO and automatically adjust the other scaling factor-->
+    <!--you can also wrap images in tags such as links to make the pictures clickable-->
+
+    <!--VIDEOS AND YOUTUBE I-FRAMES -->
+    <video src="Ready Violet.mp4" poster="WWBuysMilk.jpg" loop controls width="400">Text that appears if the video fails to load</video>
+    <!--poster lets you assign a thumbnail to a video, controls allow you to play the video, autoplay autoplays the video, loop automatically loops the video-->
+
+    <!--you can embed youtube videos using the share button on a video and copy paste the embedding here-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wqnHtGgVAUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    <footer>
+    <!--you can edit the preset youtube video size above-->
+
+    <!--LISTS IN HTML (1:23:21)-->
+    <!--unordered list-->
+    <ul> <!--the unordered list is defined here and the li tag defines each list item-->
+      <!--you can add HTML tags inside list elements like links, etc-->
+      <li>Apples</li>
+      <li>Oranges</li>
+      <li>Bananas</li>
+    </ul>
+
+    <!--ordered list-->
+    <ol type="A"> <!--the default type is 1., 2., 3., but specifying the type as A/a makes it A/a., B/b., C/c.,/// upercase I and lowercase i make it roman numerals-->
+      <li>Apples</li> <!--you can also embed lists inside of lists-->
+      <li>Oranges
+        <ol>
+          <li>item1</li>
+          <li>item2</li>
+        </ol>
+      </li>
+      <li>Bananas</li>
+    </ol>
+
+    <!--description lists - you can list out items and then describe those items-->
+    <dl>
+      <dt>Apples</dt>
+      <dd>- red/green fruit</dd>
+    </dl>
+
+    <!--TABLES IN HTML-->
+    <!--tables will automatically resize themselves to fit in a grid format but not all rows and columns have to have the same number of data entries-->
+    <!--tbody and thead can be used to specify the headings of the table and the body of the table (for code sorting and legibility purposes)-->
+    <table>
+      <thead>
+        <caption><h3>List of Numbers</h3></caption> <!--title of table-->
+        <tr>
+          <th>1</th> <!--table headers specified in bold-->
+          <th>2</th>
+          <th>3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr> <!--table row tag-->
+          <td colspan="2">one</td> <!--table column--> <!--colspan allows you to specify how many columns the data is taking up-->
+          <td>two</td>
+          <td>three</td>
+        </tr>
+        <tr>
+          <td>R2one</td>
+          <td>R2two</td>
+          <td>R3three</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--Divs and Spans-->
+    <!--a container is a tag that contains a bunch of other tags, it is good practice for CSS to wrap grouped elements into containers-->
+    <!--HTML has 2 basic ways to display elements: block and inline-->
+    <!--block elements are elements that take up the entire width of the page while inline elements can sit right next to each other inline with the text-->
+    <!--some tags are block tags and some are inline tags-->
+    <a href="#">link1</a> <!--links are inline-->
+    <a href="#">link2</a>
+
+    <!--paragraphs are block elements, forcing the next element to go below them-->
+    <p>Paragraph1</p>
+    <p>Paragraph2</p>
+
+    <!--spans are inline containers while divs are block containers-->
+    <!--you can add styling to divs and spans through CSS, divs are much more common to use-->
+    <span>span1</span>
+    <span>span2</span>
+
+    <div>div1</div>
+    <div>div2</div>
+
+    <!--input and forms-->
+    <!--input tags allow people to enter information on your webpage, in order to get information from a user you need to incorporate javascript-->
+    <input type="text" name="" value="Default value in textbox"> <!--type is the type of input to be accepted-->
+    <input type="password" name="" value=""> <!--hides the input from a text box-->
+
+    <textarea name="name" rows="8" cols="50">Default text in the text box</textarea> <!--a text box that can be size-adjusted on the webpage-->
+    <!--different input types-->
+    <input type="date"> <!--mm/dd/yy-->
+    <input type="email">
+    <input type="range"> <!--a left/right slider-->
+
+    <input type="checkbox"> <!--independent checkboxes-->
+    <input type="checkbox">
+
+    <input name="btn" type="radio"> <!--radio buttons are different from checkboxes since only one radio button can be selected if they share the same name-->
+    <input name="btn" type="radio">
+
+    <input type="submit">
+    <!--this list of input types is not exhaustive, feel free to look up all the input types for HTML-->
+
+    <!--a form is a wrapper for user input-->
+    <form class="" action="index.html" method="post">
+      <input type="submit" name="" value="">
+    </form>
+
+    <!--iFrames in HTML-->
+    <!--iFrames are an HTML element that can display another website in your webpage (embedding other websites in your webpage)-->
+    <!--width and height can be adjusted as well as adjusting the size of the frame border-->
+    <iframe src="https://www.wikipedia.com/" frameborder="0" width="1000" height="800">Text that is displayed if the user cannot view iFrames</iframe>
+    <!--lots of big websites have code to prevent their websites being used as iFrames (such as google and youtube)-->
+
+    <footer>
+    </footer>
+
+  </body>
+
+</html>
+
+<!--break and horizontal rule tags are single tags, while lots of others are double tags -->

@@ -1,0 +1,64 @@
+<script>
+  // in line comment
+  var sum = 10 + 10;
+  console.log(sum);
+
+  var quote = "I said, \"Not today, mister!\"";
+  console.log(quote);
+
+  var squote = 'This string is "single quoted"';
+  console.log(squote);
+
+  var myStr = "FirstLine\n\t\SecondLine\nThirdLine";
+  console.log(myStr);
+  var myStrLen = myStr.length;
+  console.log(myStrLen);
+
+  //strings are immutable!!
+
+  var immMyStr = "Jello World";
+  //immMyStr[0] = "H"; <- this does not work!! Instead,
+  immMyStr = "Hello World";
+
+  //For last letter in string, immMyStr[immMyStr.length-1]
+
+  function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+    return result;
+  }
+  console.log(wordBlanks("dog", "big", "ran", "quickly"));
+  console.log(wordBlanks("bike", "skinny", "peddled", "slowly"));
+
+  var myArray = ["John", 23, 6.8];
+  //use array indices to edit myArray
+  myArray[myArray.length - 1] = 5.7;
+  console.log(myArray);
+
+  //Multidimensional arrays
+  var myMultArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]];
+  var myData = myMultArray[0][0]; //myData is pointing to 1 (in the 0th array in the 0th position)
+  myData = myMultArray[3][0][1]; //myData is set to 11
+  console.log(myData);
+
+  //Append to array with .push
+  myArray.push("Male");
+  console.log(myArray);
+
+  //Using a nested array for a shopping list
+  var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]];
+
+  //function declaration
+  function myFunctionName() {
+    console.log("Function has been called!");
+  }
+  //function call
+  myFunctionName();
+
+  //function with parameters (subtracts p2 from p1)
+  function ourFunctionWithArgs(a, b) {
+    console.log(a - b);
+  }
+  ourFunctionWithArgs(10, 7);
+
+</script>

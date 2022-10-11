@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning CSS</title>
+    <!--STYLE TAGS!-->
+    <!--You can write CSS code in style tags-->
+    <!--You can use CSS selectors to choose what to style, styling different tags will automatically style all tags of that variety in the file unless they are overwritten by inline styling-->
+    <!--inline style tags can be good, but you want to store most of your CSS in style tags or in a separate CSS style sheet-->
+    <style>
+      body {
+        color: blue;
+        background-color: lightblue;
+      }
+
+      span {
+        color: yellow
+      }
+    </style>
+
+    <!--linking the CSS style sheet to the HTML sheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--you can copy this link tag to other HTML pages and it will link back to the style.css sheet-->
+  </head>
+  <!--the style attribute allows you to style (color controls the color of the text)-->
+  <body style="font-size:20px"> <!--anything inside the body tag will turn blue and will have a font size of 20 pixels-->
+    <!--you can override the body style attributes inside the tag-->
+    <header>
+      <h1 style="color: rgb(104, 217, 17)">CSS Tutorial</h1> <!--there is a huge color list, you can also use color by hex number(or rgb, or hsl), look up CSS colors list-->
+    </header>
+
+    <main>
+      <!--border attribute takes in 3 things: border width (px), border style (usually just solid), and border color (name, hex, rgb, hsl)-->
+      <!--width is specified in main so the width of main isn't the whole width of the screen(default), but instead 80% of the screen (can use pixels too)-->
+      <!--max-width attribute says that the max width of the main tag can only be 500px, so if the window gets too big it will stop resizing (height works with this too)-->
+      <!--go to www.w3schools.com/cssref/default.asp to see a bunch of different kinds of inline CSS styling attributes-->
+      <p style="color: #d98c2e">Color can be adjusted with hex code, rgb or hsl value, or name</p>
+
+      <!--margins and padding-->
+      <div style="background-color: lightgrey">
+        <div style="padding: 10px; margin: 25px; color: white; background-color: blue; border: 2px solid black; width: 80%; max-width:500px;">
+          Padding is extra space on the inside, margins are extra space on the outside
+        </div>
+        <div style="padding-top: 10px; padding-bottom: 5px; padding-left: 20px; margin: 25px; color: black; background-color: lightgreen; border: 2px solid black; width: 80%; max-width:500px;">
+          You can specify padding-top/left/right/bottom to make padding on different sides
+        </div>
+        <div style="padding: 5px 15px 30px 60px; margin: 25px; color: black; background-color: lightgreen; border: 2px solid black; width: 80%; max-width:500px;">
+          You can combine padding attributes into one padding statement going in the order of top - right - down - left (clockwise)
+        </div>
+        <div style="margin:-10px 15px 20px 25px; color: black; background-color: lightblue; border: 3px solid pink; width: 80%; max-width: 500px;"> <!--you can use negative margins too, but use them sparingly-->
+          Margins can be adjusted in the same ways as padding such as with -top/left/right/bottom
+        </div>
+      </div>
+
+      <!--floats and displays-->
+      <!--display has a ton of additional properties you can try out like flex, run-in, inline-table, etc, look them up online-->
+      <div style="background-color: lightblue">
+        <ul style="float: left; background-color: lightgreen; padding: 10px; color: black; border: 2px solid black"> <!--you can give floats 3 values: none, left, and right (float: left/float: right)-->
+          <!--you can actually overwrite the display type of tags, for example list elements are block type by default and each take up a line but if you give them display: inline in their style, they become inline-->
+          <li style="display: inline" title="DUR">Home</li>
+          <li style="display: inline">About</li>
+          <li style="display: inline">Contact Us</li>
+          <li style="display: none">Blogs</li> <!--display none gets rid of the element on the website-->
+        </ul>
+        <p style="padding-top: 25px;"><big>
+          After a float, elements are wrapped around. You can use the display and float attributes to change the way that elements on your website are displayed on the screen.
+          This would also be a way to wrap an image around text. After a float, elements are wrapped around. You can use the display and float attributes to change the way that elements on your website are displayed on the screen.
+          This would also be a way to wrap an image around text.
+        </big></p>
+      </div>
+      <!--items in a span tag will only take up the space they need, they are inline-->
+      <span>item1</span>
+      <span>item2</span>
+
+      <hr>
+
+      <!--positioning in HTML, 4 basic positions: static, absolute, relative, fixed-->
+      <!--most positions are static by default-->
+      <div style="position: relative; top:20px; left: 20px; width:90px; height:90px; background-color: red"></div> <!--you can use the tags top/bottom/right/left to edit the relative position (relative means you are editing the position relative to where it is supposed to be)-->
+      <!--relative; top: 20px moves the item down 20px since it is 20px away from the relative position-->
+      <!--you can overlap elements with relative positioning, you can also use multiple relative position modifiers at once like top:20px; left:15px-->
+
+      <!--with absolute positioning, the element will position itself relative to the nearest positioned ancestor...if the element is inside a container, it will position itself relative to that container, but otherwise it will position itself relative to the entire document-->
+      <div style="position:absolute; top:270px; left:700px; width:100px; height:100px; background-color: blue"></div>
+      <!--absolute position takes the element out of the flow of the document-->
+
+      <!--fixed positioning positions an element relative to the viewport of the website-->
+      <!--this green block will always stay at the bottom of the screen, even when scrolling down-->
+      <div style="opacity:0.5; position: fixed; bottom:0px; left: 400px; width:90px; height:90px; background-color: green"></div>
+
+      <!--shadows, opacitym and border radius-->
+      <h1 style="text-shadow: 2px 2px 4px red; position: relative; top:20px; left: 100px; color: black">Milkman</h1> <!--the text shadow attributes are the shadow dist horizontally and vertically, the third element is a blur amount, and then color-->
+      <img style="border-radius: 50%; box-shadow: 5px 5px 5px grey; opacity:0.6;"src="WWBuysMilk.jpg" alt="milkman"> <!--you can do box shadows the same way you can do text shadows-->
+      <!--border radius turns the image into a circle-->
+
+
+      <!--texts and fonts-->
+      <!--em is the recommended font size type (1em is about a 16 pixel font size)-->
+      <p style="color: black; font-size:1em; font-style: italic; font-family: 'Comic Sans MS', Times; font-variant: small-caps; font-weight: bold;">You can adjust your text font with CSS.</p>
+      <!--if comic sans MS is not available on the browser, then the default font will be Times, you can specify multiple backup fonts, lookup CS font families to get specific backups-->
+      <!--font-variant allows you to make all the letters capitals but make the not capital caps smaller(just an example look up more uses for font-variant)-->
+      <!--font-style allows you to specify italics and other settings, font-weight allows you to specify boldness-->
+
+
+      <!--style tags-->
+      <!--GO TO HEAD-->
+      <p>Style tags can be used to generically style the file</p>
+
+      <!--CLASSES AND IDS-->
+      <!--classes and IDs make it easier to reuse CSS code in multiple files since you can specify what it applies to-->
+      <h2 id="styling-Ids">Styling using IDs</h2>
+      <!--each HTML element can only have one ID but can have multiple classes-->
+      <h2 class="fancy-border green-text">Styling using classes</h2>
+      <!--IDs are meant to identify specific elements in HTML and have special attributes with the browser, IDs can be used with javascript to access the browser-->
+      <!--classes are meant to be reused on many different elements-->
+
+      <!--CSS Selectors (in CSS file)-->
+    </main>
+
+    <footer>
+      <!--external style sheets-->
+      <!--multiple HTML files can take in one CSS style sheet-->
+      <!--go to the head of the HTML file and use link to link the CSS file to the HTML file-->
+      <p>Styling the footer using CSS style sheet</p>
+      <h2>Should be small and pink!</h2>
+    </footer>
+
+    <input type="checkbox" name="" value="">
+
+    <input type="text" name="" value="">
+
+    <hr>
+    <h3 style="color:black">Flex Containers can help make good grid layouts:</h3>
+    <hr>
+    <div class="flex-container container">
+      <div style="align-item: flex-start;" class="box flex-item"><h1>1</h1></div>
+      <div class="box2 flex-item"><h1>2</h1></div>
+      <div class="box flex-item"><h1>3</h1></div>
+      <div style="align-self:center;"class="box2 flex-item"><h1>4</h1></div>
+      <div class="box flex-item"><h1>5</h1></div>
+    </div>
+
+    <hr>
+    <hr>
+
+    <!--ANIMATIONS!-->
+    <h2>Box Animation</h2>
+
+    <div class="box" style="background-color: salmon"></div>
+
+  </body>
+</html>
